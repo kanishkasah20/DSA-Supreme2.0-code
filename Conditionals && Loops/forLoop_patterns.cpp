@@ -96,9 +96,65 @@ int main() {
   }
 
 
-  // Q) half pyramids 
+// Q) half pyramids 
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+for(int i=0;i<5;i++){
+  for (int j = 0; j < i+1; j++)
+  {
+    cout<<"* ";
+  }
+  cout<<endl;
+}
 
-  
+
+// Q) inverted half pyramids
+// * * * * *
+// * * * *
+// * * *
+// * * 
+// *
+int n=5;
+for(int row=0;row<n;row++){
+  for(int col=0;col<n-row;col++){
+    cout<<"* ";
+  }
+  cout<<endl;
+
+}
+
+// Q)numeric half pyramid
+// 1
+// 1 2
+// 1 2 3
+// 1 2 3 4
+// 1 2 3 4 5
+
+int m=5;
+for(int row=0;row<m;row++){
+  for(int col=0;col<row+1;col++){
+    cout<<col+1<<" ";
+  }
+  cout<<endl;
+
+}
+
+//Q)inverted numeric half pyramid
+// 1 2 3 4 5
+// 1 2 3 4
+// 1 2 3
+// 1 2
+// 1
+for(int row=0;row<m;row++){
+  for(int col=0;col<m-row;col++){
+    cout<<col+1<<" ";
+  }
+  cout<<endl;
+
+}
 
   return 0;
 
