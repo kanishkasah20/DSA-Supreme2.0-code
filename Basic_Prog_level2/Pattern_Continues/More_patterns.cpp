@@ -60,7 +60,41 @@ int main(){
 //    * *
 //     *
 
-//hollow pyramid
+int num;
+cin>>num;
+    int u=num/2;
+    for(int row=0; row<u;row++){
+        //inner loop
+
+        //for spaces
+        for(int col=0;col<u-row-1;col++){
+            cout<<" ";
+        }
+        //for stars
+        for(int col=0;col<row+1;col++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+
+    //another half inverted daimond 
+    // int n=5;
+    for(int row=0; row<u;row++){
+        //inner loop
+
+        //for spaces
+        for(int col=0;col<row;col++){
+            cout<<" ";
+        }
+        //for stars
+        for(int col=0;col<u-row;col++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+
+
+//Q)hollow pyramid
 //    *
 //   * *
 //  *   *
@@ -75,9 +109,11 @@ int main(){
         }
         //for stars
         for(int col=0;col<row+1;col++){
+            //print star for first and last col
             if(col==0 || col==(row+1-1)){
             cout<<"* ";
             }
+            //for every col btw 1st and last col ,print space
             else{
                 cout<<"  ";
             }
@@ -85,7 +121,7 @@ int main(){
         cout<<endl;
     }
 
-//inverted hollow pyramid
+//Q)inverted hollow pyramid
 // *     *
 //  *   *
 //   * *
@@ -110,8 +146,13 @@ int main(){
         cout<<endl;
     }
 
-//flipped solid daimond
-    int w=4;
+//Q)half hollow pyramid
+// * * * * *   * * * * *
+// * * * *       * * * *
+// * * *           * * * 
+// * *               * *
+// *                   * 
+    int w=5;
     for(int row=0;row<w;row++){
        //inverted pyramid1
        for(int col=0;col<w-row;col++){
