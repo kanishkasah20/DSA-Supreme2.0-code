@@ -36,6 +36,9 @@ void checkEvenOdd(int num){
     if(num%2==0){
         cout<<"even"<<endl;
     }
+    else{
+        cout<<"odd"<<endl;
+    }
 }
 
 // Q4)
@@ -85,8 +88,9 @@ int main(){
         cout<<"not a prime"<<endl;
     }
 //-----
-    findSumEvenUptoN(10);
-    findSumUptoN(10);
+    findSumEvenUptoN(10); //Q5
+    findSumUptoN(10); //Q4
+    checkEvenOdd(10); //Q3
     printCounting(10); //Q2
     printMaximum(3,1,3);//Q1
 
