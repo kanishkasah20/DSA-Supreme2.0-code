@@ -110,7 +110,8 @@ cin>>num;
         //for stars
         for(int col=0;col<row+1;col++){
             //print star for first and last col
-            if(col==0 || col==(row+1-1)){
+            // if(col==0 || col==(row+1-1) || row==k-1){ //for last row printing star
+            if(col==0 || col==(row+1-1) ){                
             cout<<"* ";
             }
             //for every col btw 1st and last col ,print space
