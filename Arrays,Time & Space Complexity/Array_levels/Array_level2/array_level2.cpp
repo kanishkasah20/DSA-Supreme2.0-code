@@ -54,7 +54,7 @@ void shiftArray(int arr[],int n){
     }
     //step3
     temp=arr[0];
-    cout<<arr[];
+    // cout<<arr[];
 }
 
 
