@@ -48,13 +48,32 @@ int sortZeroOne(int arr[], int n)
     }
 }
 
+int SortZeroOne2PointerApproach(int arr[] ,int n){
+    int l=0;
+    int h=n-1;
+
+    while(l<=h){
+        int index=0;
+        if(arr[index]==0){
+            swap(arr[index],arr[l]);
+            l++; index++;
+        }
+        else if(arr[index]==1){
+            swap(arr[index],arr[h]);
+            h--;
+        }
+    }
+
+}
+
 int main()
 {
     // Q4)sort o's and 1's
-    int arr[] = {1, 0, 0, 0, 1, 1, 0, 0, 0};
-    int n = 9;
+    int arr[] = {1, 0, 0, 0, 1, 1, 0, 0, 0,1,1,1};
+    int n = 12;
 
-    sortZeroOne(arr, n);
+    // sortZeroOne(arr, n);
+    SortZeroOne2PointerApproach(arr,n);
 
     // print sorted array
     for (int i = 0; i < n; i++)
