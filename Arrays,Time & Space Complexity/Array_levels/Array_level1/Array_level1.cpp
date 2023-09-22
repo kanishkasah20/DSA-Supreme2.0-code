@@ -39,7 +39,7 @@ int main(){
     }
 
 
-    //array creation
+    //*---array creation---*
     //int arr[10];
     //char ch[102];
     //bool flags[223];

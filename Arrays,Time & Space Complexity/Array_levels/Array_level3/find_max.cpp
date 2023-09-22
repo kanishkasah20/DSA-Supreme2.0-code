@@ -92,22 +92,22 @@ void transpose(int arr[][4], int row, int col)
 
 int main()
 {
-    int arr[4][4] = {
-        {1, 4, 2, 1},
-        {2, 11, 7, 6},
-        {33, 44, 21, 9},
-        {3, 14, 25, 23}};
+    // int arr[4][4] = {
+    //     {1, 4, 2, 1},
+    //     {2, 11, 7, 6},
+    //     {33, 44, 21, 9},
+    //     {3, 14, 25, 23}};
 
-    int row = 4;
-    int col = 4;
+    // int row = 4;
+    // int col = 4;
 
-    cout << "Printing the max no." << findMAx(arr, row, col) << endl;
-    cout << "Printing the min no." << findMin(arr, row, col) << endl;
-    RowWiseSum(arr, row, col);
-    ColWiseSum(arr, row, col);
-    transpose(arr, row, col);
-    printArray(arr, row, col);
-    cout << endl;
+    // cout << "Printing the max no." << findMAx(arr, row, col) << endl;
+    // cout << "Printing the min no." << findMin(arr, row, col) << endl;
+    // RowWiseSum(arr, row, col);
+    // ColWiseSum(arr, row, col);
+    // transpose(arr, row, col);
+    // printArray(arr, row, col);
+    // cout << endl;
 
     // 2D Array
     vector<vector<int>> arr(5, vector<int>(10, 0));

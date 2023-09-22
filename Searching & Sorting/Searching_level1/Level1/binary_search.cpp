@@ -62,7 +62,7 @@ int findlastOccurence(int arr[],int n, int target){
     while(s<=e){
         if(arr[mid]==target){
             ans=mid;
-            //left m jao
+            //right m jao
             s=mid+1;
         }
         else if(target>arr[mid]){
@@ -116,17 +116,17 @@ int finddMissingElemnt(int arr[], int n){
 
 int main(){
 
-    int arr[]={1,2,3,4,6,7,8};
-    int n=8;
+    // int arr[]={1,2,3,4,6,7,8};
+    // int n=8;
 
-    int element=finddMissingElemnt(arr,n);
-    cout<<element<<endl;
+    // int element=finddMissingElemnt(arr,n);
+    // cout<<element<<endl;
 
-    // int arr[]={10,20,30,30,40,50,60};
-    // int size=7;
-    // int target=30;
+    int arr[]={10,20,30,30,40,50,60};
+    int size=7;
+    int target=30;
 
-    // // int ans= findFirstOccurence(arr,size,target);
+    // int ans= findFirstOccurence(arr,size,target);
     // int ans= findlastOccurence(arr,size,target);
     
     // if(ans==-1){
