@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// ---Divide 2 numbers by using binary search
+
 int getQuotient(int divisor,int dividend){
     int s=0; int e=dividend;
     int mid=s+(e-s)/2;
