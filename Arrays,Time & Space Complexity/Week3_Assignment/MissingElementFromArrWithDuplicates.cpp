@@ -25,3 +25,31 @@ int main(){
 
 
 }
+
+//method 2
+void missingElementTwo(int arr[], int n)
+{
+    int i = 0;
+    while (i < n)
+    {
+        int index = arr[i] - 1;
+        if (arr[i] != arr[index])
+        {
+            swap(arr[i], arr[index]);
+        }
+        else
+        {
+            i++;
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    // now find the missing numbers;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] != i + 1)
+            cout << i + 1 << " ";
+    }
+}

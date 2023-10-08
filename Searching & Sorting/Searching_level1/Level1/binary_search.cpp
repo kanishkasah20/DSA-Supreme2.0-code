@@ -75,7 +75,27 @@ int findlastOccurence(int arr[],int n, int target){
     }
     return ans;
 }
+int findLastOccurence(int arr[], int n , int target){
+    int s=0;
+    int e=n-1;
+    int mid= s+(e-s)/2;
+    int ans=0;
 
+    while(s<=e){
+        if(arr[mid]==target){
+            ans=mid;
+            s=mid+1;
+        }
+        else if(arr[mid]<target){
+            s=mid+1;
+        }
+        else{
+            e=mid-1;
+        }
+        mid = s+(e-s)/2;
+    }
+    return ans;
+}
 // int totalOccurence(int arr[], int n, int target){
 //     int s=0;
 //     int e=n-1;
@@ -122,19 +142,19 @@ int main(){
     // int element=finddMissingElemnt(arr,n);
     // cout<<element<<endl;
 
-    int arr[]={10,20,30,30,40,50,60};
-    int size=7;
+    int arr[]={10,20,30,30,30,30,40,50,60};
+    int size=9;
     int target=30;
 
     // int ans= findFirstOccurence(arr,size,target);
-    // int ans= findlastOccurence(arr,size,target);
+    int ans= findLastOccurence(arr,size,target);
     
-    // if(ans==-1){
-    //     cout<<"element not found"<<endl;
-    // }
-    // else{
-    //     cout<<"element found "<<ans<<endl;
-    // }
+    if(ans==-1){
+        cout<<"element not found"<<endl;
+    }
+    else{
+        cout<<"element found "<<ans<<endl;
+    }
 
     // int ansIndex= binarySearch(arr,size,target);
     
