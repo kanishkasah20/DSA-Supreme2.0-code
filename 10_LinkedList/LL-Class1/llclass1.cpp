@@ -18,11 +18,30 @@ class Node{
       }
 };
 
+void printLL(Node* head){
+  Node* temp= head;
+  while(temp!=NULL){
+    cout<<temp->data<<"->";
+    temp=temp->next;
+  } 
+  cout<<endl;
+}
+
+int findLength(Node* &head ) {
+        int len = 0;
+        Node* temp = head;
+        while(temp != NULL) {
+                temp = temp->next;
+                len++;
+        }
+        return len;
+}
+
 int main(){
 
     //creation of Node
-    Node a; //static object is created
-    Node* head = new Node(); //dynamic object
+    // Node a; //static object is created
+    // Node* head = new Node(); //dynamic object
 
     Node* first = new Node(10);
     Node* second = new Node(20);
@@ -35,6 +54,11 @@ int main(){
     third->next=fourth;
     fourth->next=five;
     //linked list is created
+
+    Node* head= first;
+    printLL(head);
+
+    cout<<"Length of LL is: "<<findLength(head);
 
 
 
