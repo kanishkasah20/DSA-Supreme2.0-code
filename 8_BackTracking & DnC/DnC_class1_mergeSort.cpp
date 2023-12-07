@@ -45,7 +45,7 @@ void merge(int arr[], int s, int e) {
 		else {
 			arr[mainArrayIndex] =  right[rightIndex];
 			mainArrayIndex++;
-			rightIndex++;
+			rightIndex++; 
 		}
 	}
 
