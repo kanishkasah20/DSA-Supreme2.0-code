@@ -32,7 +32,11 @@ using namespace std;
 //     }
 // };
 
-template <typename T>
+
+//by using template we can write generalize code, like type (int,char)etc 
+// for weight type we'll using int type only , and for all for int type data 
+// replace it with template T , and Template type is specified in main function 
+template <typename T> 
 class Graph {
   public:
     unordered_map<T, list<pair<T,int> > > adjList;
@@ -45,6 +49,9 @@ class Graph {
         adjList[u].push_back({v,wt});
         adjList[v].push_back({u,wt});
       }
+      // cout << endl << "printing adjList" << endl;
+      // printAdjList();
+      // cout << endl;
     }
 
     void printAdjList() {
@@ -107,10 +114,10 @@ int main() {
 //   g.addEdge(1,3,0);
 //   g.addEdge(2,3,0);
 
-  Graph<char> g;
+  Graph<char> g; //here template type is char 
  // cout << "HII" << endl;
   g.addEdge('a','b',5,0);
-  //g.addEdge('a','c',10,0);
+  g.addEdge('a','c',10,0);
   g.addEdge('c','d',20,0);
   g.addEdge('c','e',50,0);
   g.addEdge('d','e',20,0);
@@ -118,20 +125,23 @@ int main() {
 
   unordered_map<char, bool> visited;
   //g.dfs('a',visited);
-  for(char node='a'; node<='f'; node++) {
+  int count=0;
+  for(char node='a'; node<='f'; node++) { //same for this handling disconnected graph by looping all node visited
     if(!visited[node]) {
         g.dfs(node, visited);
+        count++;
     }
   }
+  
   //HW: find out number of disconnected components in a graph
   
 
-//   unordered_map<char, bool> vis;
-//   for(char node='a'; node<='f'; node++) {
-//       if(!vis[node] ) {
-//         g.bfsTraversal(node,vis);
-//       }
-//   }
+  // unordered_map<char, bool> vis;
+  // for(char node='a'; node<='f'; node++) {  //( yahi glti krte h->  for handling disconnected componenet of graph loop for all node to get visited)
+  //     if(!vis[node] ) {
+  //       g.bfsTraversal(node,vis);
+  //     }
+  // }
 
   
   return 0;
