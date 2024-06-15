@@ -125,6 +125,7 @@ void getSubsequences(string str) {
 	}
 }
 
+
 int main() {
 
 	string str = "abc";
